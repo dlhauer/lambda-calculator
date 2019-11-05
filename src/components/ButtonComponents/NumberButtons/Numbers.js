@@ -11,12 +11,12 @@ import { numbers } from '../../../data'
 import {numbers} from '../../../data'
 // console.log(numbers);
 
-const Numbers = () => {
+const Numbers = (props) => {
   const [numberState, setNumberState] = useState(numbers);
   return (
     <div className='numbers-container'>
       {numberState.map( (item, index) => (
-        <NumberButton key={index} button={item}/>
+        <NumberButton total={props.total} set={props.set} key={index} button={item}/>
       )) }
     </div>
   );
