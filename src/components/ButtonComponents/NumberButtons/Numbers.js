@@ -14,7 +14,7 @@ import {numbers} from '../../../data'
 const Numbers = () => {
   const [numberState, setNumberState] = useState(numbers);
   return (
-    <div>
+    <div className='numbers-container'>
       {numberState.map( (item, index) => (
         <NumberButton key={index} button={item}/>
       )) }
